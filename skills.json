@@ -1,0 +1,57 @@
+[
+  "Python", "JavaScript", "TypeScript", "Java", "C", "C++", "C#", "Go", "Rust",
+  "Ruby", "PHP", "Swift", "Kotlin", "Scala", "R", "MATLAB", "Perl", "Bash",
+  "Shell", "PowerShell", "Dart", "Lua", "Haskell", "Elixir", "Clojure", "Julia",
+
+  "React", "Vue", "Angular", "Svelte", "Next.js", "Nuxt.js", "Gatsby",
+  "Node.js", "Express", "FastAPI", "Django", "Flask", "Spring Boot", "Laravel",
+  "Rails", "ASP.NET", "Gin", "Echo", "Fiber", "NestJS", "Fastify",
+
+  "HTML", "CSS", "SASS", "LESS", "Tailwind CSS", "Bootstrap", "Material UI",
+  "Chakra UI", "Styled Components", "Webpack", "Vite", "Parcel", "Babel",
+  "GraphQL", "REST API", "gRPC", "WebSockets", "OAuth", "JWT", "OpenAPI",
+
+  "MongoDB", "PostgreSQL", "MySQL", "SQLite", "Redis", "Cassandra", "DynamoDB",
+  "Elasticsearch", "Neo4j", "CouchDB", "MariaDB", "Oracle", "SQL Server",
+  "Firebase", "Supabase", "PlanetScale", "Firestore",
+
+  "AWS", "Azure", "Google Cloud", "GCP", "Heroku", "Vercel", "Netlify",
+  "DigitalOcean", "Linode", "Cloudflare", "Lambda", "EC2", "S3", "RDS",
+  "GKE", "EKS", "AKS", "CloudFront",
+
+  "Docker", "Kubernetes", "Terraform", "Ansible", "Jenkins", "GitHub Actions",
+  "GitLab CI", "CircleCI", "Travis CI", "ArgoCD", "Helm", "Vagrant",
+  "Prometheus", "Grafana", "ELK Stack", "Datadog", "New Relic",
+
+  "Git", "GitHub", "GitLab", "Bitbucket", "Jira", "Confluence", "Slack",
+  "Linux", "Unix", "macOS", "Windows Server", "Nginx", "Apache", "Traefik",
+
+  "Machine Learning", "Deep Learning", "Natural Language Processing", "NLP",
+  "Computer Vision", "Reinforcement Learning", "MLOps", "Data Science",
+  "TensorFlow", "PyTorch", "Keras", "scikit-learn", "XGBoost", "LightGBM",
+  "Hugging Face", "OpenAI", "LangChain", "BERT", "GPT", "Transformers",
+  "Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "Jupyter",
+  "Apache Spark", "Hadoop", "Kafka", "Airflow", "dbt", "Tableau", "Power BI",
+  "Looker", "BigQuery", "Redshift", "Snowflake", "dbt", "Databricks",
+
+  "Agile", "Scrum", "Kanban", "SAFe", "Waterfall", "DevOps", "Site Reliability",
+  "SRE", "Product Management", "Project Management", "ITIL",
+
+  "Cybersecurity", "Penetration Testing", "Network Security", "SIEM", "SOC",
+  "Cryptography", "OAuth2", "OWASP", "Vulnerability Assessment",
+
+  "iOS", "Android", "React Native", "Flutter", "Xamarin", "Ionic", "Cordova",
+
+  "Microservices", "Serverless", "Event-Driven Architecture", "CQRS",
+  "Domain-Driven Design", "DDD", "Design Patterns", "SOLID", "TDD", "BDD",
+  "Unit Testing", "Integration Testing", "End-to-End Testing", "Selenium",
+  "Cypress", "Jest", "Pytest", "JUnit", "Postman",
+
+  "Blockchain", "Solidity", "Web3", "Ethereum", "Smart Contracts",
+
+  "UI/UX Design", "Figma", "Sketch", "Adobe XD", "InVision", "Zeplin",
+  "Accessibility", "WCAG",
+
+  "Communication", "Leadership", "Teamwork", "Problem Solving", "Critical Thinking",
+  "Time Management", "Mentoring", "Code Review", "Technical Writing", "Documentation"
+]
