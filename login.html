@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeAi — Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <div class="auth-split">
+    <div class="auth-left">
+      <div class="auth-brand">
+        <span class="brand-icon">◈</span>
+        <span class="brand-name">ResumeAI</span>
+      </div>
+      <div class="auth-hero">
+        <h1>Screen smarter.<br>Hire better.</h1>
+        <p>AI-powered resume analysis that finds the right candidates — instantly.</p>
+        <div class="auth-stats">
+          <div class="stat"><strong>98%</strong><span>Accuracy</span></div>
+          <div class="stat"><strong>10s</strong><span>Per Resume</span></div>
+          <div class="stat"><strong>500+</strong><span>Skills DB</span></div>
+        </div>
+      </div>
+      <div class="auth-grid-bg"></div>
+    </div>
+    <div class="auth-right">
+      <div class="auth-form-container">
+        <h2>Welcome back</h2>
+        <p class="auth-sub">Sign in to your dashboard</p>
+        <div id="auth-error" class="alert alert-error hidden"></div>
+        <form id="login-form" class="auth-form">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="jane@company.com" required>
+          </div>
+          <div class="form-group">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Your password" required>
+          </div>
+          <button type="submit" class="btn-primary" id="submit-btn">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-loader hidden">⟳</span>
+          </button>
+        </form>
+        <p class="auth-switch">Don't have an account? <a href="register.html">Register</a></p>
+        <div class="admin-hint">
+          <span>Admin?</span> Use your admin credentials to access the <a href="admin.html">Admin Panel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="auth.js"></script>
+  <script>
+    document.getElementById('login-form').addEventListener('submit', handleLogin);
+  </script>
+</body>
+</html>
