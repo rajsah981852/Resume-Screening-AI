@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeAi — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="app-page">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-icon">◈</span>
+      <span class="brand-name">ResumeAI</span>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#upload" class="nav-item active" data-section="upload">
+        <span class="nav-icon">⬆</span> Analyze Resume
+      </a>
+      <a href="#history" class="nav-item" data-section="history">
+        <span class="nav-icon">◷</span> History
+      </a>
+    </nav>
+    <div class="sidebar-footer">
+      <div class="user-info">
+        <div class="user-avatar" id="user-avatar">J</div>
+        <div class="user-details">
+          <span class="user-name" id="user-name">Loading...</span>
+          <span class="user-role">User</span>
+        </div>
+      </div>
+      <button class="logout-btn" onclick="logout()">Sign Out</button>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Upload Section -->
+    <section id="section-upload" class="content-section active">
+      <div class="section-header">
+        <h1>Analyze Resume</h1>
+        <p>Upload a resume and paste a job description to get an AI-powered match score</p>
+      </div>
+
+      <div class="upload-grid">
+        <div class="card upload-card">
+          <h3>Upload Resume</h3>
+          <div class="drop-zone" id="drop-zone">
+            <div class="drop-icon">📄</div>
+            <p>Drop your PDF or DOCX here</p>
+            <span>or</span>
+            <label class="file-label" for="resume-file">Browse File</label>
+            <input type="file" id="resume-file" accept=".pdf,.docx" hidden>
+            <div class="file-selected hidden" id="file-selected">
+              <span id="file-name"></span>
+              <button onclick="clearFile()" class="clear-file">✕</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card jd-card">
+          <h3>Job Description</h3>
+          <textarea id="job-description" placeholder="Paste the job description here...
+
+Example:
+We are looking for a Python Developer with experience in FastAPI, MongoDB, and machine learning. The candidate should have strong skills in REST API development, Docker, and cloud platforms like AWS..."></textarea>
+        </div>
+      </div>
+
+      <div id="analyze-error" class="alert alert-error hidden"></div>
+
+      <button class="btn-primary btn-large" id="analyze-btn" onclick="analyzeResume()">
+        <span class="btn-text">⚡ Analyze Resume</span>
+        <span class="btn-loader hidden">Analyzing...</span>
+      </button>
+
+      <!-- Results -->
+      <div id="results-section" class="results-section hidden">
+        <div class="results-header">
+          <h2>Analysis Results</h2>
+          <span id="result-filename" class="result-badge"></span>
+        </div>
+
+        <div class="results-grid">
+          <div class="card score-card">
+            <h4>Match Score</h4>
+            <div class="score-ring-container">
+              <svg class="score-ring" viewBox="0 0 120 120">
+                <circle cx="60" cy="60" r="52" class="ring-bg"/>
+                <circle cx="60" cy="60" r="52" class="ring-fill" id="score-ring-fill"/>
+              </svg>
+              <div class="score-value" id="score-value">0%</div>
+            </div>
+            <div class="score-label" id="score-label">—</div>
+          </div>
+
+          <div class="card skills-card">
+            <h4>Skills Found <span id="skills-count" class="badge">0</span></h4>
+            <div class="skills-list" id="skills-found"></div>
+          </div>
+
+          <div class="card missing-card">
+            <h4>Missing Skills <span id="missing-count" class="badge badge-red">0</span></h4>
+            <div class="skills-list" id="skills-missing"></div>
+          </div>
+
+          <div class="card suggestions-card">
+            <h4>AI Suggestions</h4>
+            <ul class="suggestions-list" id="suggestions-list"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- History Section -->
+    <section id="section-history" class="content-section">
+      <div class="section-header">
+        <h1>Analysis History</h1>
+        <p>Your previous resume analyses</p>
+      </div>
+
+      <div id="history-loading" class="loading-state">
+        <div class="spinner"></div>
+        <p>Loading history...</p>
+      </div>
+
+      <div id="history-empty" class="empty-state hidden">
+        <div class="empty-icon">📋</div>
+        <h3>No analyses yet</h3>
+        <p>Upload your first resume to get started</p>
+        <a href="#upload" class="btn-primary" onclick="switchSection('upload')">Analyze Resume</a>
+      </div>
+
+      <div id="history-table-container" class="hidden">
+        <table class="data-table" id="history-table">
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Score</th>
+              <th>Skills Found</th>
+              <th>Missing Skills</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="history-body"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
